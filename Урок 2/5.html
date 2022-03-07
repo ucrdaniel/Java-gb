@@ -32,7 +32,35 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+      case "+": return sum(arg1, arg2);
+      case "-": return difference(arg1, arg2);
+      case "*": return multiplication(arg1, arg2);
+      case "/": return division(arg1, arg2);
+      default: return NaN;
+    }
+  }
+ 
+  function sum(a, b) {
+    return a + b;
+  }
+
+  function difference(a, b) {
+    if (a > b) {
+      return a - b;
+    }
+    return b - a;
+  }
+
+  function multiplication(a, b) {
+    return a * b;
+  }
+
+  function division(a, b) {
+    return a / b;
+  }
+
 </script>
 </body>
 </html>
